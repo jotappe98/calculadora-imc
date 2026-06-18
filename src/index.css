@@ -1,0 +1,36 @@
+/*CSS global*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lato', sans-serif ;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url("./assets/bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #FBF5E8;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+.container{
+    width: 400px;
+    height: 400px;
+    padding: 2rem;
+    background-color:#2E2E2E;
+    border-radius: 10px;
+    border:1px solid #FBF5E8;
+    color: #FBF5E8;
+}
+
+
+
+
