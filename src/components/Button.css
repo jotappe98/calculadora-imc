@@ -19,14 +19,16 @@ button:hover{
     color:#FBF5E8;
 }
 
-#clear-btn{
-    background-color:#FBF5E8 /*#ff0000*/;
+#clear-btn, #back-btn{
+    background-color:#FBF5E8;
     color:#023569;
 }
 
-#clear-btn:hover{
+#clear-btn:hover, #back-btn:hover{
     background-color:#ff0000;
     color:#FBF5E8;
     transform: scale(1.02);
  }
+
+
 

@@ -1,6 +1,11 @@
 #calc-container{
     text-align:center;
     margin-bottom:2rem;
+    margin-top:2rem;
+}
+
+#calc-container h2 {
+    margin-bottom:1rem;
 }
 
 .form-inputs{

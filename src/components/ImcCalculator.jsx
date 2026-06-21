@@ -2,7 +2,7 @@ import './ImcCalculator.css'
 import Button from './Button'
 import {useState} from 'react'
 
-const ImcCalculator = () => {
+const ImcCalculator = ({calcImc}) => {
 
     const [height,setHeight] = useState("")
     const [weight,setWeight] = useState("")
@@ -11,13 +11,6 @@ const ImcCalculator = () => {
         e.preventDefault()
         setHeight("")
         setWeight("")
-    }
-
-    const imcCalc = (e) => {
-        e.preventDefault()
-        let imc = weight / (height * height)
-        console.log(`Seu IMC é:${imc.toFixed(2)}`);
-        
     }
 
     const validateDigits = (text) => {
@@ -35,7 +28,7 @@ const ImcCalculator = () => {
 
   return (
     <div id="calc-container">
-        <h2>Calculadora de IMC</h2>
+        <h2>CALCULADORA DE IMC</h2>
         <form id="imc-form">
             <div className="form-inputs">
                 <div className="form-control">
@@ -46,6 +39,7 @@ const ImcCalculator = () => {
                         id="height" 
                         placeholder="Exemplo: 1.80" 
                         required
+                        autoComplete="off"
                         onChange={handleHeightChange}
                         value={height}
                     />
@@ -59,13 +53,14 @@ const ImcCalculator = () => {
                         id="weight" 
                         placeholder="Exemplo: 70.5" 
                         required
+                        autoComplete="off"
                         onChange={handleWeightChange}
                         value={weight}
                     />
                 </div>
 
                 <div className="action-control">
-                    <Button id="calc-btn" text="Calcular" action={imcCalc}/>
+                    <Button id="calc-btn" text="Calcular" action={(e) => calcImc(e, height, weight)}/>
                     <Button id="clear-btn" text="Limpar" action={clearForm}/>
                 </div>
             </div>
