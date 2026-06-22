@@ -30,6 +30,7 @@ function App() {
       if (imcResult >= item.min && imcResult <= item.max) {
         setInfo(item.info);
         setInfoClass(item.infoClass);
+        setWarning(item.warning);
       }
     });
 
@@ -46,6 +47,7 @@ const resetCalc = (e) => {
   setImc("")
   setInfo("")
   setInfoClass("")
+  setWarning("")
 }
 
 
@@ -53,6 +55,7 @@ const resetCalc = (e) => {
   const [info, setInfo] = useState("")
   const [infoClass, setInfoClass] = useState("")
   const [loading, setLoading] = useState(false)
+  const [warning, setWarning] = useState("")
 
   
 
@@ -68,6 +71,7 @@ const resetCalc = (e) => {
             imc={imc}
             info={info}
             infoClass={infoClass}
+            warning={warning}
             resetCalc={resetCalc}
           />
         )}

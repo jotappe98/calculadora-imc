@@ -6,6 +6,7 @@ export const data = [
     info: "Magreza",
     obesity: "0",
     infoClass:"medium",
+    warning:"Seu IMC indica magreza. Uma avaliação profissional pode ajudar a identificar possíveis causas e orientar estratégias para alcançar um peso adequado."
   },
   {
     min: 18.5,
@@ -14,6 +15,7 @@ export const data = [
     info: "Normal",
     obesity: "0",
     infoClass:"good",
+    warning:"Seu IMC está dentro da faixa considerada saudável. Continue mantendo hábitos equilibrados e acompanhamento regular da sua saúde."
   },
   {
     min: 25,
@@ -22,6 +24,7 @@ export const data = [
     info: "Sobrepeso",
     obesity: "I",
     infoClass:"low",
+    warning:"Seu IMC indica sobrepeso. Pequenas mudanças nos hábitos alimentares e na prática de atividades físicas podem contribuir para uma melhor qualidade de vida."
   },
   {
     min: 30,
@@ -30,13 +33,15 @@ export const data = [
     info: "Obesidade",
     obesity: "II",
     infoClass:"medium",
+    warning:"Seu IMC indica obesidade. É recomendado acompanhamento profissional para orientação adequada sobre saúde, alimentação e atividade física." 
   },
   {
     min: 40,
-    max: 99,
+    max: 999,
     classification: "Maior que 40,0",
     info: "Obesidade grave",
     obesity: "III",
     infoClass:"high",
+    warning:"Seu IMC indica obesidade grave. Procure avaliação médica para acompanhamento especializado e definição das melhores estratégias de cuidado."
   },
 ];

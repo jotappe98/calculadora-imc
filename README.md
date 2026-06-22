@@ -1,16 +1,44 @@
-# React + Vite
+# Calculadora de IMC
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de uma calculadora de IMC desenvolvida com React, com foco em prática de lógica, estado, componentes e melhorias de experiência do usuário (UX).
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Cálculo automático do IMC com base em peso e altura
+- Classificação do resultado (Magreza, Normal, Sobrepeso, Obesidade e Obesidade Grave)
+- Exibição de tabela com todas as faixas de IMC
+- Destaque automático da faixa correspondente ao resultado do usuário
+- Mensagens de aviso contextuais de acordo com a classificação
+- Tela de carregamento com mensagens rotativas durante o cálculo
+- Transições suaves entre as telas
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## Este projeto foi desenvolvido com foco em:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Manipulação de estado com React (useState)
+- Renderização condicional de componentes
+- Componentização
+- Manipulação de eventos de formulário
+- Melhoria de UX com feedback visual e transições
+- Organização de dados externos (data.js)
+
+##  Tecnologias utilizadas
+
+- React
+- JavaScript (ES6+)
+- CSS3
+- HTML5
+
+##  Interface
+
+Projeto com foco em UI simples e funcional, com feedback visual de classificação através de cores e destaques.
+
+##  Como executar o projeto
+
+```bash
+# Instalar dependências
+npm install
+
+# Rodar o projeto
+npm run dev

@@ -81,3 +81,22 @@
         transform: translateY(0);
     }
 }
+
+
+#warning-container{
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    text-align: left;
+}
+
+#warning-container h4{
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+}
+
+#warning-message{
+    line-height: 1.5;
+    font-size: .9rem;
+}

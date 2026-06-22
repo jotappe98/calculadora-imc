@@ -1,8 +1,11 @@
 import './ImcCalculator.css'
 import Button from './Button'
-import {useState} from 'react'
+import {useState, useRef} from 'react'
+
 
 const ImcCalculator = ({calcImc}) => {
+
+    const weightInputRef = useRef(null);
 
     const [height,setHeight] = useState("")
     const [weight,setWeight] = useState("")
@@ -14,7 +17,7 @@ const ImcCalculator = ({calcImc}) => {
     }
 
     const validateDigits = (text) => {
-        return text.replace(/[^0-9.]/g, '');
+        return text.replace(/[^0-9.,]/g, '');
     }
     const handleHeightChange = (e) => {
         const updatedValue = validateDigits(e.target.value);
@@ -25,6 +28,13 @@ const ImcCalculator = ({calcImc}) => {
         const updatedValue = validateDigits(e.target.value);
         setWeight(updatedValue);
     }
+
+    const handleHeightKeyDown = (e) => {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        weightInputRef.current?.focus();
+    }
+}
 
   return (
     <div id="calc-container">
@@ -42,6 +52,7 @@ const ImcCalculator = ({calcImc}) => {
                         autoComplete="off"
                         onChange={handleHeightChange}
                         value={height}
+                        onKeyDown={handleHeightKeyDown}
                     />
                 </div>
 
@@ -56,6 +67,7 @@ const ImcCalculator = ({calcImc}) => {
                         autoComplete="off"
                         onChange={handleWeightChange}
                         value={weight}
+                        ref={weightInputRef}
                     />
                 </div>
 
